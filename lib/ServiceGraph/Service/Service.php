@@ -3,8 +3,8 @@
 namespace ServiceGraph\Service;
 
 use DomainException;
-use LogicException;
 use InvalidArgumentException;
+use LogicException;
 use ServiceGraph\Action\Action;
 
 class Service
