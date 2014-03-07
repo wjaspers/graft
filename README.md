@@ -14,6 +14,11 @@ class DogSitter extends Service {
 ## Define your Action(s)
 ```
 class WalkAction extends Action {
+   public function getCallbackName()
+   {
+      return 'walk';
+   }
+   
    public function walk($name)
    {
       echo sprintf("I'm taking %s for a walk", $name);
