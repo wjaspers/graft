@@ -1,0 +1,23 @@
+{
+    "name": "wjaspers/service-graph",
+    "type": "library",
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "authors": [
+    	{
+    		"name": "Will Jaspers",
+    		"email": "wjaspers4@gmail.com"
+    	}
+    ],
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~3.7"
+    },
+    "autoload": {
+        "psr-0": {
+            "ServiceGraph\\": "lib/"
+        }
+    }
+}
