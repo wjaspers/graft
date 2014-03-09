@@ -3,9 +3,9 @@
 namespace ServiceGraph\Tests\Service;
 
 use ServiceGraph\Action\Action;
-use ServiceGraph\Service\Service;
+use ServiceGraph\Service\Graft;
 
-class ServiceTest extends \PHPUnit_Framework_TestCase
+class GraftTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @var Service
@@ -16,7 +16,8 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
     public function setUp()
     {
         parent::setUp();
-        $this->service = new Service;
+        $service = $this->getObjectForTrait('ServiceGraph\Service\Graft');
+        $this->service = $service;
     }
 
 
@@ -121,7 +122,8 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
 
     public function testCallThrowsException()
     {
-        $this->setExpectedException('DomainException', 'Action "cantFindMe" not found on service "ServiceGraph\Service\Service"');
+        $classname = get_class($this->service);
+        $this->setExpectedException('DomainException', 'Action "cantFindMe" not found on service "' . $classname . '"');
         $this->service->cantFindMe();
     }
 

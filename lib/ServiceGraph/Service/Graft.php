@@ -7,7 +7,7 @@ use LogicException;
 use InvalidArgumentException;
 use ServiceGraph\Action\Action;
 
-class Service
+trait Graft
 {
     /**
      * @var array
